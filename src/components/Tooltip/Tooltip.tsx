@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { cn } from "@/libs/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -41,7 +41,7 @@ const Tooltip = ({
   className,
 }: TooltipProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [timeoutId, setTimeoutId] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   const showTooltip = () => {
     const id = setTimeout(() => setIsVisible(true), delay);
