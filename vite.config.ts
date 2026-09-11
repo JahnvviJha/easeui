@@ -10,11 +10,12 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  /*
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "EaseUI",
-      fileName: (format) => `easeui.${format}.js`,
+      fileName: (format) => \`easeui.\${format}.js\`,
     },
     cssCodeSplit: true,
     rollupOptions: {
@@ -27,4 +28,5 @@ export default defineConfig({
       },
     },
   },
+  */
 });
